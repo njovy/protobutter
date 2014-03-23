@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.njovy.protobutter</groupId>
+    <artifactId>protobutter</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>ProtoButter</name>
+    <description>An RPC implementation that works with Protocol Buffers for Java.</description>
+    <url>http://github.com/njovy/protobutter/</url>
+
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.sourceEncoding>UTF-8</project.reporting.sourceEncoding>
+
+        <!-- Compilation -->
+        <java.version>1.6</java.version>
+
+        <!-- Dependencies -->
+        <protobuf.version>2.5.0</protobuf.version>
+        <netty.version>3.8.0.Final</netty.version>
+
+        <!-- Test Dependencies -->
+        <junit.version>4.10</junit.version>
+    </properties>
+
+    <scm>
+        <url>http://github.com/njovy/protobutter</url>
+        <connection>scm:git:git://github.com/njovy/protobutter.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/njovy/protobutter.git</developerConnection>
+    </scm>
+
+    <issueManagement>
+        <system>GitHub Issues</system>
+        <url>http://github.com/njovy/protobutter/issues</url>
+    </issueManagement>
+
+    <licenses>
+        <license>
+            <name>Apache 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <organization>
+        <name>Team NJOVY</name>
+        <url>http://njovy.com</url>
+    </organization>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty</artifactId>
+            <version>${netty.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+            <version>${protobuf.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>
