@@ -1,0 +1,5 @@
+option java_package = "com.njovy.protobutter.protocol";
+option java_outer_classname = "PBCommon";
+
+package protobutter;
+

@@ -1,0 +1,24 @@
+import "ProtobufferCommon.proto";
+
+option java_package = "com.njovy.protobutter.protocol";
+option java_outer_classname = "PBResponse";
+
+package protobutter;
+
+message Response{
+	enum Status{
+		OK = 0;
+		FAILED = 1;
+		BAD_REQUEST = 2;	
+		NOT_FOUND = 3;
+		TIMEOUT = 4;
+		CANCELLED = 5;
+		UNKNOWN = 6;
+		INVALID_PROTOCOL = 7;
+	}
+
+	required Status status = 1 [default = FAILED];
+	optional string request_id = 2;
+	optional string message = 3;	
+	extensions 1000 to 99999; 
+}
