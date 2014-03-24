@@ -1,0 +1,29 @@
+import "ProtobufferCommon.proto";
+import "ProtobufferResponse.proto";
+
+option java_package = "com.njovy.protobutter.protocol";
+option java_outer_classname = "PBRequest";
+
+package protobutter;
+
+enum Command{
+	/**
+	 *   peers: Could be any module
+	 *    sync: Sync
+	 * message: Request
+	 */
+	KNOCK_KNOCK = 1;
+
+}
+
+enum Sync{
+	SYNC = 1;
+	ASYNC = 2;
+}
+
+message Request{
+	extensions 1000 to 99999;	
+	required Command command = 1;
+	required Sync sync = 2;	
+	optional string id = 3;
+}
